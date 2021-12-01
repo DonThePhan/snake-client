@@ -11,24 +11,23 @@ const connect = function() {
   conn.setEncoding('utf8');
 
   conn.on('connect', () => {
-    console.log('Successfully connected to game server!')
-    conn.write('Name: DON')
-  })
+    console.log('Successfully connected to game server!');
+    conn.write('Name: DON');
+  });
 
   conn.on('data', (data) => {
     console.log('Server says: ', data);
   });
-  
+
   // conn.on("connect", () => {
   //   // code that does something when the connection is first established
   // });
 
   process.stdin.on('data', function(message) {
-    conn.write(message);
+    conn.write('Move: up');
   });
-
 
   return conn;
 };
 
-module.exports = { connect }
+module.exports = { connect };
