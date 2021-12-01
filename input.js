@@ -22,6 +22,11 @@ const handleUserInput = function(data) {
   if (data === 'a') connection.write('Move: left');
   if (data === 'd') connection.write('Move: right');
   if (data === 's') connection.write('Move: down');
+  
+  if (data === '1') connection.write('Say: Catch me if you can!');
+  if (data === '2') connection.write('Say: I wanna be, the very best');
+  if (data === '3') connection.write('Say: :P');
+  if (data === '4') connection.write('Say: gotta eat em all');
 };
 
 
